@@ -731,3 +731,78 @@ header video
         transform: translateX(50%);
     }
 }
+/**/
+@media screen and (max-width: 1200px) {
+    .container
+    {
+        width: 80%;
+    }
+    .container .part-one .profile .profile_img
+    {
+        height: 150px;
+    }
+    .container .part-one .profile .profile_text
+    {
+        width: 400px;
+        margin: 0 auto;
+    }
+    .container .part-three.show .project
+    {
+        width: 1000px;
+    }
+    .container .part-three.show .project .project-card
+    {
+        width: 280px;
+        height: 200px;       
+    }
+    .container .part-one .coords .contact-list,
+    .container .part-one .trivia .trivia_list
+    {
+        transform: none;
+        left: -20px;
+    }
+    .container .part-one .coords:hover .contact-list
+    {
+        transform: translateY(-345px);
+    }
+    .container .part-one .coords img,
+    .container .part-one .trivia img
+    {
+        display: none;
+    }
+    .container .part-one .trivia:hover .trivia_list
+    {
+        transform: translateY(160px);
+    }
+}
+@media screen and (max-width: 900px)  {
+    .container .part-three.show .project
+    {
+        width: 800px;
+    }
+}
+@media screen and (max-width: 500px)  {
+    .container .part-two .nav .box
+    {
+        width: 450px;
+        
+    }
+    .container .part-two .nav .skills
+    {
+        transform: translateY(200px);
+    }
+    .container .part-two .nav .box .img-container
+    {
+        display: none;
+    }
+    .container .part-three.show .project
+    {
+        width: 480px;
+    }
+    .container .part-one .profile .profile_text
+    {
+        width: 300px;
+        margin: 0 auto;
+        font-size: 0.8em;
+    }
+}

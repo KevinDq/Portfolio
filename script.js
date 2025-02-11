@@ -1,49 +1,47 @@
-let container = document.querySelector(".container");
-let navItems = document.querySelectorAll(".nav");
+const container = document.querySelector(".container");
+const navItems = document.querySelectorAll(".nav");
+const boxes = document.querySelectorAll(".box");
 
-
-// Ajouter des écouteurs d'événements aux éléments de navigation
-navItems.forEach(function(element) {
-    element.addEventListener("click", showSection);
-});
-
-// Fonction pour afficher ou masquer les sections
-function showSection(event) {
-    let targetClass = event.currentTarget.getAttribute('data-target');
-    let targetElement = document.querySelector(`.${targetClass}.box`);    
-
-    // Masquer tous les éléments
-    document.querySelectorAll(".box").forEach(box => {
-        box.classList.remove('visible');
-    });
-
-    // Afficher l'élément cible
-    targetElement.classList.toggle('visible');
-
-    // Appliquer le décalage de la container
-    if (targetElement.classList.contains('visible')) {
-        container.style.transform = "translateX(-400px)";
+// Fonction pour calculer le décalage dynamique
+function getOffset() {
+    if (window.innerWidth <= 500) {
+        return -800; // Très petit écran (mobile portrait)
+    } else if (window.innerWidth <= 1200) {
+        return -850; // Mobile paysage / petites tablettes    
     } else {
-        container.style.transform = "none";
+        return -400; // Grand écran
     }
-
-    // Empêcher la propagation de l'événement pour éviter de masquer l'élément immédiatement
-    event.stopPropagation();
 }
 
-// Ajouter un écouteur d'événement au document pour masquer les sections affichées lorsque l'on clique en dehors
-document.addEventListener("click", function() {
-    document.querySelectorAll(".box").forEach(box => {
-        box.classList.remove('visible');
-    });
+function showSection(event) {
+    event.stopPropagation();
+
+    const targetClass = event.currentTarget.dataset.target;
+    const targetElement = document.querySelector(`.${targetClass}.box`);
+
+    const isVisible = targetElement.classList.toggle("visible");
+
+    // Masquer les autres éléments
+    boxes.forEach(box => box !== targetElement && box.classList.remove("visible"));
+
+    // Appliquer le décalage correct
+    container.style.transform = isVisible ? `translateX(${getOffset()}px)` : "none";
+}
+
+// Ajouter les écouteurs d'événements
+navItems.forEach(item => item.addEventListener("click", showSection));
+
+// Cacher les sections au clic en dehors
+document.addEventListener("click", () => {
+    boxes.forEach(box => box.classList.remove("visible"));
     container.style.transform = "none";
 });
 
-// Empêcher la propagation de l'événement sur les éléments de navigation pour éviter de masquer l'élément immédiatement
-navItems.forEach(function(element) {
-    element.addEventListener("click", function(event) {
-        event.stopPropagation();
-    });
+// Vérifier et ajuster le décalage si la fenêtre est redimensionnée
+window.addEventListener("resize", () => {
+    if (document.querySelector(".box.visible")) {
+        container.style.transform = `translateX(${getOffset()}px)`;
+    }
 });
 
 let partThree = document.querySelector(".part-three")

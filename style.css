@@ -184,7 +184,7 @@ header video{
 }
 .container .part-one .profile .profile-img{
   position: absolute;
-  height: 200px;
+  height: 180px;
   left: 50%;
   transform: translateX(-50%) translateY(0);
   top: 0;
@@ -192,11 +192,11 @@ header video{
   opacity: 0;
 }
 .container .part-one .profile .profile_text{
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 400;
   text-align: justify;
   margin-top: 20px;
-  width: min(90vw, 500px);
+  width: min(90vw, 400px);
   opacity: 0;
   transition: transform var(--t-med) var(--easing), opacity var(--t-med) var(--easing);
 }
@@ -587,5 +587,6 @@ header video{
   * { animation: none !important; transition: none !important; }
 
 }
+
 
 

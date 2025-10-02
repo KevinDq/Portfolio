@@ -22,7 +22,7 @@
   --t-slow: 1s;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
+html, body { height: 100%; font-size: 16px; }
 body
 {
   display: flex;
@@ -33,7 +33,10 @@ body
   font-family: var(--ff-sans);
   overflow: hidden;
   background: transparent;
+  font-size: 1rem;
+  font-size-adjust: 0.52; /* ~Poppins */
 }
+h1,h2 { font-size-adjust: 0.50; /* ~Orbitron (ajuste si besoin) */ }
 /* --- Utilitaires légers --- */
 .u-center { text-align: center; }
 .u-list { list-style: none; margin: 0; padding: 0; }
@@ -136,7 +139,7 @@ header video{
   transition: transform var(--t-med) var(--easing), font-size var(--t-slow) var(--easing);
 }
 .container .part-one .profile h1{
-  font-size: clamp(2rem, 4vw + 1rem, 4em);
+  font-size: clamp(2rem, 4vw + 1rem, 4rem);
   width: min(90vw, 600px);
   text-align: center;
   padding: 15px 0;
@@ -147,7 +150,7 @@ header video{
   color: transparent;
 }
 .container .part-one .profile h2{
-  font-size: clamp(1.25rem, 2.5vw + .75rem, 2.5em);
+  font-size: clamp(1.5rem, 2.5vw + .75rem, 3rem);
   width: min(80vw, 450px);
   margin: 0 auto 120px;  
   text-align: center;
@@ -571,4 +574,5 @@ header video{
 /* --- Accessibilité : reduced motion --- */
 @media (prefers-reduced-motion: reduce){
   * { animation: none !important; transition: none !important; }
+
 }

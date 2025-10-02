@@ -356,7 +356,7 @@ header video{
   color: var(--c-text-dim);
   cursor: pointer;
   text-transform: uppercase;
-  padding: 20px 0;
+  padding: 15px 0;
   font-family: var(--ff-display);
 }
 .container .part-two .nav h3 i{ margin: 0 10px; }
@@ -371,7 +371,7 @@ header video{
   padding: 15px;
   display: none;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
   width: min(90vw, 650px);
   transition: opacity var(--t-med) var(--easing), visibility 0s linear var(--t-med);
 }
@@ -395,15 +395,15 @@ header video{
 
 /* Skills */
 .container .part-two .nav :is(.skills){
-  bottom: -300px;
-  width: min(95vw, 800px);
+  bottom: -250px;
+  width: min(95vw, 700px);
   grid-template-columns: repeat(3, 1fr);
 }
 .container .part-two .nav .skills .skill{
   display: flex; align-items: center; flex-direction: column;
 }
 .container .part-two .nav .skills .skill h4{
-  flex-basis: 100px;
+  flex-basis: 60px;
   font-weight: 400;
   display: flex;
   color: aquamarine;
@@ -440,7 +440,7 @@ header video{
 /* Grades */
 .container .part-two .nav .grades ul{
   list-style: none;
-  display: flex; flex-direction: column; gap: 30px;
+  display: flex; flex-direction: column; gap: 20px;
   text-align: center; font-size: 1.4em;
 }
 .container .part-two .nav .grades ul li h5{ font-weight: 400; }
@@ -464,10 +464,10 @@ header video{
 }
 .container .part-three.show .project{
   opacity: 1;
-  transform: translateY(-770px);
+  transform: translateY(-700px);
   visibility: visible;
 }
-.container .part-three.show .project_title{ transform: translateY(-760px); }
+.container .part-three.show .project_title{ transform: translateY(-680px); }
 .container .part-three.show .project_title .fa-solid{ transform: rotateX(180deg); }
 
 .container .part-three .project_title{
@@ -587,4 +587,5 @@ header video{
   * { animation: none !important; transition: none !important; }
 
 }
+
 

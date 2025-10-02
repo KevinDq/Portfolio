@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>CV</title>
+    <link rel="preload" as="image" href="./img/bg.webp" />
+    <link rel="preload" as="image" href="./img/head.png" />
+    <link rel="preload" as="image" href="./img/pngegg.png" />
+</head>
+<body>
+    <header aria-hidden="true">
+        <h2>Bonjour <br> et <br> bienvenue</h2>    
+        <h2>Je suis...</h2>
+        <video autoplay loop muted playsinline preload="metadata">
+        <source src="./img/animation.webm" type="video/webm">            
+        </video>    
+    </header>
+    <picture>    
+        <source srcset="./img/bg.webp" type="image/webp" />
+        <img class="background" src="./img/bg.webp" alt="" decoding="async" fetchpriority="high" />
+    </picture>
+    <main class="container glass-box" data-color="violet-blue" role="main" aria-label="Contenu principal du CV"> 
+     <!-- Partie 1   -->
+        <section class="part-one">
+            <!-- Profil -->
+            <article class="profile">
+                <h1>Kévin DUCROCQ</h1>
+                <h2>Développeur Web</h2>
+                <img class="profile-bg" src="./img/head.png" alt="" loading="lazy" decoding="async">
+                <img class="profile-img" src="./img/pngegg.png" alt=""  loading="lazy" decoding="async">
+                <p class="profile_text">
+                    Après des années en grande distribution, j'ai entamé ma reconversion
+                    professionnelle dans l'informatique car c'est un domaine qui me
+                    passionne et dans lequel je baigne depuis l'école primaire.
+                    <br/><br/>
+                    Ma formation de développeur Web m'a fait découvrir les métiers du
+                    numérique et m'a confirmé que je suis fait pour cela et que mon
+                    avenir est dans ce domaine.
+                </p>                
+            </article> 
+            <!-- Contact -->
+            <article class="coords">
+                <h3>Contact</h3>        
+                <address class="contact-list glass-box" data-color="orange-red">
+                <ul>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i>06 25 64 44 46</li>
+                    <li><i class="fa-regular fa-envelope" aria-hidden="true"></i>ducrocq.kevin.85@gmail.com</li>
+                    <li class="adress"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Saint-Omer (62500)</span></li>
+                </ul>
+                </address>
+                <img src="./img/contact-img.png" alt="" loading="lazy" decoding="async" />
+            </article>
+            <!-- Divers -->
+            <article class="trivia">
+                <h3>Divers</h3>          
+                <article class="trivia_list glass-box" data-color="orange-red">
+                    <h5 class="trivia_title">Permis B</h5>
+                    <p style="text-align: center;">+ Véhicule</p>
+                    <h5 class="trivia_title">Intérêts</h5>
+                    <ul>
+                        <li><i class="fa-solid fa-gamepad" aria-hidden="true"></i>Jeux vidéos</li>
+                        <li><i class="fa-solid fa-person-running" aria-hidden="true"></i>Running</li>
+                        <li><i class="fa-solid fa-utensils" aria-hidden="true"></i>Cuisine</li>
+                        <li><i class="fa-solid fa-pencil" aria-hidden="true"></i>Dessin</li>
+                    </ul>
+                    <h5 class="trivia_title">Langues</h5>
+                    <ul class="language">
+                        <li><img class="flag" src="./img/Flag uk.png" alt="" loading="lazy" decoding="async" /> Anglais courant</li>
+                    </ul>
+                    <img class="img" src="./img/trivia-img.png" alt="" loading="lazy" decoding="async" />
+                </article>
+            </article>
+        </section>   
+        <!-- Partie 2 -->
+        <section class="part-two">                        
+            <article  class="nav" aria-label="Sections du CV" data-target="skills">
+                <h3>Compétences<i class="fa-solid fa-chevron-right"></i></h3>
+                <article class="skills box glass-box" data-color="green-cyan">
+                    <article class="skill">
+                        <h4>Langages</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>                      
+                        </ul>
+                    </article>
+                    <article class="skill">
+                        <h4>Frameworks & Librairies</h4>
+                        <ul>
+                            <li>React</li>
+                            <li>Next.js</li>
+                            <li>Vue.js</li>
+                            <li>TailwindCSS</li>                      
+                        </ul>
+                    </article>
+                    <article class="skill">
+                        <h4>Outils</h4>
+                        <ul>
+                            <li>Git/Github</li>
+                            <li>Node.js</li>
+                            <li>NPM</li>
+                            <li>VS Code</li>                      
+                        </ul>
+                    </article>
+                    <article class="skill">
+                        <h4>Autres</h4>
+                        <ul>
+                            <li>Responsive design</li>
+                            <li>SEO de base</li>
+                            <li>Accessibilité</li>                      
+                        </ul>
+                    </article>
+                    <article class="skill">
+                        <h4>Savoir-êtres</h4>
+                        <ul>
+                            <li>Autonomie</li>
+                            <li>Adaptabilité</li>
+                            <li>Rigeur et précision</li>
+                            <li>Curiosité</li>
+                            <li>Patience</li>
+                        </ul>
+                    </article>
+                    <article class="img-container one"><img src="./img/skills-img2.webp" alt=""></article>
+                    <article class="img-container two"><img src="./img/skills-img.webp" alt=""></article>
+                </article>
+            </article>
+            <article class="nav" data-target="exps">
+                <h3>Expérience<i class="fa-solid fa-chevron-right"></i></h3>
+                <article class="exps box glass-box" data-color="green-cyan">
+                    <article class="exp">
+                        <article class="year_company">
+                            <h5>2025</h5>
+                            <h5>E.Kinnoo<br> Architecte</h5>
+                        </article>
+                        <article class="exp_text">
+                            <h4 class="highlight">Stage formation SJT</h4>
+                            <p>Création, déploiement et référencement d'un portfolio pour un architecte indépendant sous Next.js.</p>
+                        </article>
+                    </article>
+                    <article class="exp">
+                        <article class="year_company">
+                            <h5>2023</h5>
+                            <h5>F.Remaux<br> Architecte</h5>
+                        </article>
+                        <article class="exp_text">
+                            <h4 class="highlight">Stage de fin de formation DWWM</h4>
+                            <p>Création et déploiement d'un site vitrine pour un architecte indépendant.</p>
+                        </article>
+                    </article>
+                    <article class="exp">
+                        <article class="year_company">
+                            <h5>2022-2023</h5>
+                            <h5>AFPA</h5>
+                        </article>
+                        <article class="exp_text">
+                            <h4 class="highlight">Formation Développeur Web et Web mobile</h4>
+                            <p>Apprentissage approfondi du HTML, du CSS, du JS et du PHP.</p>
+                        </article>
+                    </article>
+                    <article class="exp old">
+                        <article class="exp">
+                            <article class="year_company">
+                            <h5>2022</h5>
+                            <h5>M2I</h5>
+                        </article>
+                        <article class="exp_text">
+                            <h4 class="highlight">Formation "La Nursery"</h4>
+                            <p>Découverte des métiers du numérique.<br/> Apprentissage des bases du HTML, du CSS, du JS et du Data.</p>
+                        </article>
+                        </article>
+                        <article class="exp">
+                            <article class="year_company">
+                            <h5>2009-2010</h5>
+                            <h5>BG-Micro</h5>
+                        </article>
+                        <article class="exp_text">
+                            <h4>Technicien en informatique</h4>
+                            <p>Diagnostiquer, réparer et monter du matériel informatique</p>
+                        </article>
+                        </article>
+                    </article>       
+                    <article class="img-container one"><img class="img-one" src="./img/exp-img1.webp" alt=""></article>             
+                    <article class="img-container two"><img class="img-two" src="./img/exp-img2.webp" alt=""></article>             
+                </article>
+            </article>
+            <article class="nav" data-target="grades">
+                <h3>Diplômes<i class="fa-solid fa-chevron-right"></i></h3>
+                <article class="grades box glass-box" data-color="green-cyan">
+                    <ul>
+                        <li>
+                            <h5>2023</h5>
+                            <h4 class="highlight">Titre pro. Dév. Web</h4>
+                            <h4>AFPA, Roubaix</h4>
+                        </li>
+                        <li>
+                            <h5>2005</h5>
+                            <h4>BTS NRC (niveau)</h4>
+                            <h4>Lycée Ribot, St Omer</h4>
+                        </li>
+                        <li>
+                            <h5>2003</h5>
+                            <h4>Bac STT ACC</h4>
+                            <h4>Lycée Ribot, St Omer</h4>
+                        </li>
+                    </ul>
+                    <article class="img-container one"><img class="img-one" src="./img/grade-img2.webp" alt=""></article>             
+                    <article class="img-container two"><img class="img-two" src="./img/grade-img1.webp" alt=""></article> 
+                </article>
+            </article>
+        </section>  
+        <!-- Partie 3 -->
+        <section class="part-three">
+            <h2 class="project_title"><i class="fa-solid fa-chevron-up"></i>Projets<i class="fa-solid fa-chevron-up"></i></h2>
+            <article class="project glass-box" data-color="gray-blue">
+                <article class="project-card">
+                    <a href="https://kevindq.github.io/blog-recettes/" target="_blank"><img src="./img/projet1.webp"><h4>Blog de recettes</h4></a>                
+                </article>            
+                <article class="project-card">
+                    <a href="https://kevindq.github.io/guide_leveling_wow/" target="_blank"><img src="./img/projet3.webp">
+                        <h4>Guide jeu vidéo</h4></a>                
+                </article>
+                <article class="project-card">
+                    <a href="https://ek-archi.vercel.app/" target="_blank"><img src="./img/projet9.webp">
+                        <h4>Vitrine d'Architecte sous Next.js</h4></a>
+                </article>           
+                <article class="project-card">
+                    <a href="https://kevindq.github.io/ArchitecteProjet/" target="_blank"><img src="./img/projet4.webp">
+                        <h4>Vitrine d'Architecte</h4></a>                
+                </article>
+                <article class="project-card">
+                    <a href="https://kevindq.github.io/VOD_Site/" target="_blank"><img src="./img/projet8.webp">
+                        <h4>Site de VOD en streaming</h4></a>                
+                </article>
+                <article class="project-card">
+                    <a href="https://kevindq.github.io/Blog_R-gime/" target="_blank"><img src="./img/projet2.webp">
+                        <h4>Blog Régime</h4></a>                
+                </article>
+            </article>
+        </section>  
+    </main>    
+ <script src="./script.js"></script>
+</body>
+</html>

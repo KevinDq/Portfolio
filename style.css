@@ -70,7 +70,7 @@ body
 .container {
   position: relative;  
   display: block;    
-  inline-size: min(0vw, 1000px);
+  width: min(1000px, 90vw);
   min-block-size: 50dvh;  
   overflow: hidden;
   block-size: auto;
@@ -535,4 +535,5 @@ body
 /* --- Accessibilité : reduced motion --- */
 @media (prefers-reduced-motion: reduce){
   * { animation: none !important; transition: none !important; }
+
 }
